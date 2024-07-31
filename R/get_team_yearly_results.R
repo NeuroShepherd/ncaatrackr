@@ -6,7 +6,7 @@
 #' @param team_link character, html link. The base link to the team's page on TFRRS
 #' @param year numeric, the year for which you want to see the results
 #'
-#' @return list, a list of data frames with the results for each event
+#' @return a named list. should be data frames with the results for each event type
 #' @export
 #'
 #' @examples
@@ -24,7 +24,13 @@ get_team_yearly_results <- function(team_link, year) {
 
   page %>%
     html_nodes("table") %>%
-    lapply(function(x) html_table(x)) %>%
+    lapply(
+      function(x) {
+        athlete_ids <- get_athlete_id(x)
+        html_table(x) %>%
+          dplyr::select(-1) %>%
+          dplyr::bind_cols(athlete_ids)
+      } ) %>%
     stats::setNames(event_names)
 
 }
