@@ -2,6 +2,7 @@
 
 export("%>%")
 export(build_team_season_link)
+export(get_athlete_id)
 export(get_conference_links)
 export(get_event_names)
 export(get_season_code)
