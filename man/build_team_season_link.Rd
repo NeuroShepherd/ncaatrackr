@@ -2,15 +2,20 @@
 % Please edit documentation in R/build_team_season_link.R
 \name{build_team_season_link}
 \alias{build_team_season_link}
-\title{Title}
+\title{Build Team-Season Link}
 \usage{
 build_team_season_link(html_link, season_code)
 }
 \arguments{
-\item{season_code}{}
+\item{html_link}{The base link to the team's page on TFRRS.}
+
+\item{season_code}{The season code for the desired season.}
+}
+\value{
+character, html link
 }
 \description{
-Title
+This function builds the links needed for seeing the performance page of a given team in a given season.
 }
 \examples{
 

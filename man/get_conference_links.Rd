@@ -7,12 +7,16 @@
 get_conference_links(html_file)
 }
 \arguments{
-\item{html_file}{}
+\item{html_file}{The html file containing the conference links.}
+}
+\value{
+vector of html links
 }
 \description{
 Get Conference Links
 }
 \examples{
+ncaatrackr::load_ncaatrackr_data()[["tfrrs_outdoor_lists_ncaad1.html"]] \%>\%
+get_conference_links()
 
-get_conference_links("ncaa_track_d1_html")
 }

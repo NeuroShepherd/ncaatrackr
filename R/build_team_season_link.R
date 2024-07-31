@@ -1,11 +1,13 @@
 
 
-#' Title
+#' Build Team-Season Link
 #'
-#' @param html_link
-#' @param season_code
+#' This function builds the links needed for seeing the performance page of a given team in a given season.
 #'
-#' @return
+#' @param html_link The base link to the team's page on TFRRS.
+#' @param season_code The season code for the desired season.
+#'
+#' @return character, html link
 #' @export
 #'
 #' @examples

@@ -6,6 +6,14 @@
 \usage{
 load_ncaatrackr_data()
 }
+\value{
+a list of html files containing data from ncaatrackr
+}
 \description{
-Load ncaatrackr Data
+Loads in the html files stored in the package `extdata` folder
+}
+\examples{
+
+load_ncaatrackr_data()
+
 }

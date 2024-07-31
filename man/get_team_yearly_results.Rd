@@ -7,7 +7,12 @@
 get_team_yearly_results(team_link, year)
 }
 \arguments{
-\item{year}{}
+\item{team_link}{character, html link. The base link to the team's page on TFRRS}
+
+\item{year}{numeric, the year for which you want to see the results}
+}
+\value{
+list, a list of data frames with the results for each event
 }
 \description{
 Get the results tables for a team in a given year

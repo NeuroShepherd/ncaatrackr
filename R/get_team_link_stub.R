@@ -1,9 +1,11 @@
 
 #' Get Team Link Stub
 #'
-#' @param team_link
+#' Takes the base link to the team's page on TFRRS and returns the stub needed for building the team-season link.
 #'
-#' @return
+#' @param team_link The base link to the team's page on TFRRS.
+#'
+#' @return character, the stub needed for building the team-season link.
 #' @export
 #'
 #' @examples

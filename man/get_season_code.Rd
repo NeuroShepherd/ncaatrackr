@@ -7,11 +7,14 @@
 get_season_code(year)
 }
 \arguments{
-\item{year}{}
+\item{year}{the year for which you want the season code}
 }
 \value{
-vector of length 1
+numberic vector of length 1
 }
 \description{
-See the `season_code` data frame from this package. This function matches the year to the season code.
+See the `season_codes` data frame from this package. This function matches the year to the season code.
+}
+\examples{
+get_season_code(2023)
 }

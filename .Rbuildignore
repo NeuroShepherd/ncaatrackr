@@ -3,3 +3,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^inst/scratch$
+^LICENSE\.md$
+^analysis_steps\.R$
