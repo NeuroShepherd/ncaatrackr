@@ -22,5 +22,6 @@ get_event_names <- function(team_season_page) {
     html_nodes(".custom-table-title") %>%
     html_nodes("h3") %>%
     html_text() %>%
-    trimws()
+    trimws() %>%
+    stringr::str_remove_all(" |,")
 }

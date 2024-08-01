@@ -29,7 +29,8 @@ get_team_yearly_results <- function(team_link, year) {
         athlete_ids <- get_athlete_id(x)
         html_table(x) %>%
           dplyr::select(-1) %>%
-          dplyr::bind_cols(athlete_ids)
+          dplyr::bind_cols(athlete_ids) %>%
+          dplyr::rename_with(~stringr::str_remove_all(.x, " "), everything())
       } ) %>%
     stats::setNames(event_names)
 
