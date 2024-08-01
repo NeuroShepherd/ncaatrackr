@@ -1,4 +1,6 @@
 
+# Template code for running an analysis
+
 
 # READ IN THE HTML FILE
 system.file("extdata", package="ncaatrackr") %>%
@@ -13,7 +15,8 @@ system.file("extdata", package="ncaatrackr") %>%
   get_team_links_from_conference() %>%
   extract(8) %>% # Michigan
 # READ THE LINK TO THE WEBSITE FOR THE TEAM, AND INPUT A YEAR FOR RESULTS
-  get_team_yearly_results(year = 2021)
+  get_team_yearly_results(year = 2019) %>%
+  lapply(function(x) nrow(x)) %>% unlist() %>% sum()
 
 
 # All of the extract*() calls are potential mapping points
