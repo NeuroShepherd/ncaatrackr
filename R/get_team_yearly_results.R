@@ -23,7 +23,8 @@ get_team_yearly_results <- function(team_link, year) {
   }, error = function(e) {
     log_file <- "results_log.txt"
     msg <- paste0(as.character(e), ",", team_link, ",", year) %>%
-      stringr::str_remove_all("\\n")
+      stringr::str_remove_all("\\n") %>%
+      paste0(., "\n")
     print(msg)
     cat(msg, file = log_file, append = TRUE)
   })
@@ -40,7 +41,7 @@ get_team_yearly_results <- function(team_link, year) {
             dplyr::select(-1) %>%
             dplyr::bind_cols(athlete_ids) %>%
             dplyr::rename_with(~stringr::str_remove_all(.x, " "), everything()) %>%
-            dplyr::mutate()
+            dplyr::mutate(team_link = team_link, team_season_link = built_link)
         } ) %>%
       stats::setNames(event_names)
     }
