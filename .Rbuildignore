@@ -6,3 +6,5 @@
 ^inst/scratch$
 ^LICENSE\.md$
 ^analysis_steps\.R$
+^inst/results_logs$
+
